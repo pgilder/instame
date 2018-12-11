@@ -18,6 +18,16 @@ FlowRouter.route("/login", {
     }
 });
 
+FlowRouter.route("/posts", {
+    name: "Posts",
+    subscriptions(params) {
+
+    },
+    action(params) {
+        renderMainLayoutWith(<C.Posts />);
+    }
+});
+
 function renderMainLayoutWith(component) {
     ReactLayout.render(C.MainLayout, {
         header: <C.MainHeader />,
